@@ -1,4 +1,4 @@
-import { PublicNavigation } from "@/components/public-navigation";
+import { PublicNavigation } from "@/components/customs/public-navigation";
 
 export default function ClientLayout({
   children,
