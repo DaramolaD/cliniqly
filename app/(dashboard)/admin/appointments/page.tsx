@@ -60,7 +60,7 @@ export default function AppointmentsPage() {
     },
   ];
 
-  const getStatusVariant = (status: string) => {
+  const getStatusVariant = (status: string): "default" | "secondary" | "destructive" => {
     switch (status) {
       case 'Confirmed':
         return 'default';
@@ -213,7 +213,7 @@ export default function AppointmentsPage() {
                     {appointment.doctor}
                   </TableCell>
                   <TableCell>
-                    <Badge variant={getStatusVariant(appointment.status) as any}>
+                    <Badge variant={getStatusVariant(appointment.status)}>
                       {appointment.status}
                     </Badge>
                   </TableCell>

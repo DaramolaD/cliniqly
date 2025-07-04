@@ -60,7 +60,7 @@ export default function StaffPage() {
     },
   ];
 
-  const getRoleVariant = (role: string) => {
+  const getRoleVariant = (role: string): "default" | "secondary" | "outline" | "destructive" => {
     switch (role) {
       case 'Physician':
         return 'default';
@@ -75,7 +75,7 @@ export default function StaffPage() {
     }
   };
 
-  const getStatusVariant = (status: string) => {
+  const getStatusVariant = (status: string): "default" | "secondary" | "outline" | "destructive" => {
     switch (status) {
       case 'Active':
         return 'default';
@@ -275,16 +275,16 @@ export default function StaffPage() {
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col space-y-1">
-                      <Badge variant={getRoleVariant(member.role) as "default" | "secondary" | "outline" | "destructive"}>
+                      <Badge variant={getRoleVariant(member.role)}>
                         {member.role}
                       </Badge>
                       <span className="text-sm text-gray-500">{member.department}</span>
                     </div>
                   </TableCell>
                   <TableCell>
-                                         <Badge variant={getStatusVariant(member.status) as "default" | "secondary" | "outline" | "destructive"}>
-                       {member.status}
-                     </Badge>
+                    <Badge variant={getStatusVariant(member.status)}>
+                      {member.status}
+                    </Badge>
                   </TableCell>
                   <TableCell className="text-sm text-gray-900">
                     {new Date(member.joinDate).toLocaleDateString()}
