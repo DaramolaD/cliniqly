@@ -1,5 +1,5 @@
 import { PublicNavigation } from "@/components/customs/public-navigation";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -21,11 +21,11 @@ export default function PricingPage() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Starter Plan */}
           <Card className="border-2 border-gray-200">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Starter</CardTitle>
-              <CardDescription>Perfect for solo practitioners</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Starter</h3>
+                <p className="text-gray-600">Perfect for solo practitioners</p>
+              </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">$19<span className="text-lg font-normal text-gray-500">/month</span></div>
               <p className="text-sm text-gray-500 mb-8">or $190/year (save 17%)</p>
               
@@ -80,11 +80,11 @@ export default function PricingPage() {
               <Badge variant="default">Most Popular</Badge>
             </div>
             
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Clinic</CardTitle>
-              <CardDescription>For growing clinics</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Clinic</h3>
+                <p className="text-gray-600">For growing clinics</p>
+              </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">$49<span className="text-lg font-normal text-gray-500">/month</span></div>
               <p className="text-sm text-gray-500 mb-8">or $490/year (save 17%)</p>
               
@@ -141,11 +141,11 @@ export default function PricingPage() {
 
           {/* Enterprise Plan */}
           <Card className="border-2 border-purple-500">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Enterprise</CardTitle>
-              <CardDescription>For large practices</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+                <p className="text-gray-600">For large practices</p>
+              </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">Custom</div>
               <p className="text-sm text-gray-500 mb-8">Contact us for pricing</p>
               
