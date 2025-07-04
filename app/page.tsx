@@ -1,7 +1,8 @@
-import { PublicNavigation } from "@/components/customs/customs/public-navigation";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { PublicNavigation } from "@/components/customs/public-navigation";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Calendar, Users, BarChart3 } from "lucide-react";
 
 export default function Home() {
   return (
@@ -31,42 +32,36 @@ export default function Home() {
           <Card>
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                <Calendar className="w-6 h-6 text-blue-600" />
               </div>
               <CardTitle className="text-lg mb-2">AI-Powered Scheduling</CardTitle>
-              <CardDescription>
+              <p className="text-gray-600">
                 Automate appointment booking, reminders, and follow-ups with smart AI tools.
-              </CardDescription>
+              </p>
             </CardContent>
           </Card>
           
           <Card>
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-                </svg>
+                <Users className="w-6 h-6 text-green-600" />
               </div>
               <CardTitle className="text-lg mb-2">Patient Management</CardTitle>
-              <CardDescription>
+              <p className="text-gray-600">
                 Centralize patient records, history, and communication in one secure place.
-              </CardDescription>
+              </p>
             </CardContent>
           </Card>
           
           <Card>
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+                <BarChart3 className="w-6 h-6 text-purple-600" />
               </div>
               <CardTitle className="text-lg mb-2">Analytics & Insights</CardTitle>
-              <CardDescription>
+              <p className="text-gray-600">
                 Track clinic performance, patient satisfaction, and revenue with real-time dashboards.
-              </CardDescription>
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -77,11 +72,11 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12">Simple, Transparent Pricing</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="border-2 border-blue-500">
-            <CardHeader className="text-center">
-              <CardTitle>Starter</CardTitle>
-              <CardDescription>For solo practitioners</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2">Starter</h3>
+                <p className="text-gray-600 text-sm">For solo practitioners</p>
+              </div>
               <div className="text-3xl font-bold mb-2">$19<span className="text-base font-normal">/mo</span></div>
               <ul className="mb-6 text-sm text-gray-600 space-y-2">
                 <li>✓ Up to 100 patients</li>
@@ -99,11 +94,11 @@ export default function Home() {
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <Badge variant="default">Most Popular</Badge>
             </div>
-            <CardHeader className="text-center">
-              <CardTitle>Clinic</CardTitle>
-              <CardDescription>For growing clinics</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2">Clinic</h3>
+                <p className="text-gray-600 text-sm">For growing clinics</p>
+              </div>
               <div className="text-3xl font-bold mb-2">$49<span className="text-base font-normal">/mo</span></div>
               <ul className="mb-6 text-sm text-gray-600 space-y-2">
                 <li>✓ Up to 1,000 patients</li>
@@ -119,11 +114,11 @@ export default function Home() {
           </Card>
           
           <Card className="border-2 border-purple-500">
-            <CardHeader className="text-center">
-              <CardTitle>Enterprise</CardTitle>
-              <CardDescription>For large practices</CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center p-6">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2">Enterprise</h3>
+                <p className="text-gray-600 text-sm">For large practices</p>
+              </div>
               <div className="text-3xl font-bold mb-2">Custom</div>
               <ul className="mb-6 text-sm text-gray-600 space-y-2">
                 <li>✓ Unlimited patients</li>
